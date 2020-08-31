@@ -1,4 +1,4 @@
-# Astro camp JS webpacker workshop 暖身教材
+# ASTRO Camp JavaScript workshop 暖身教材
 
 #### JS workshop 將會練習在 Rails 裡面用 Webpack 來安裝、使用前端套件
 
