@@ -30,12 +30,10 @@
 #### 參考樣式
 
 >原本 index 頁
-
-![](https://i.imgur.com/5HLL6Pv.png)
+![](https://i.imgur.com/OIVHjLL.png)
 
 >原本 new 頁
-
-![](https://i.imgur.com/OIVHjLL.png)
+![](https://i.imgur.com/5HLL6Pv.png)
 
 
 > bootstrap 完成後，index 頁
