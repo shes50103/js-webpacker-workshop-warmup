@@ -8,7 +8,7 @@
 ## 熱身任務
 > workshop 開始之前建議同學可以先練習安裝 Bootstrap<br>
 > 正式 workshop 將會有從此專案再往下做
-> 暖身教材建議使用 [Bootstrap@4.5.2](https://yarnpkg.com/package/bootstrap) 套件
+> 暖身教材建議使用 [Bootstrap@4.5.3](https://yarnpkg.com/package/bootstrap) 套件
 
 
 #### 目標：用 Bootstrap 美化頁面
