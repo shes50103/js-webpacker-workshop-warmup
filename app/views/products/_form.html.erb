@@ -23,12 +23,24 @@
 
   <div class="field">
     <%= form.label :start_at %>
-    <%= form.datetime_select :start_at, class: "custom-select mr-sm-2" %>
+    <div class="input-group date" id="datetimepicker7" data-target-input="nearest">
+      <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker7"/>
+      <div class="input-group-append" data-target="#datetimepicker7" data-toggle="datetimepicker">
+          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+      </div>
+  </div>
   </div>
 
   <div class="field">
     <%= form.label :end_at %>
-    <%= form.datetime_select :end_at, class: "custom-select" %>
+    <div class="form-group">
+      <div class="input-group date" id="datetimepicker8" data-target-input="nearest">
+           <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker8"/>
+           <div class="input-group-append" data-target="#datetimepicker8" data-toggle="datetimepicker">
+               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+           </div>
+       </div>
+   </div>
   </div>
 
   <div class="field">

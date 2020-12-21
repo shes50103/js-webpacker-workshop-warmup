@@ -8,14 +8,14 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
-import 'jquery'
+// import 'jquery'
 import 'popper.js'
 import 'bootstrap'
 import 'bootstrap/scss/bootstrap.scss'
 
 import 'select2'
 import 'select2/dist/css/select2.css'
-import $ from 'jquery' 
+// import $ from 'jquery' 
 window.$ = $
 // currency
 $(document).on('turbolinks:load', function() {
@@ -46,7 +46,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     })
   })
+
+  $(function () {
+    $('#datetimepicker7').datetimepicker();
+    $('#datetimepicker8').datetimepicker({
+        useCurrent: false
+    });
+    $("#datetimepicker7").on("change.datetimepicker", function (e) {
+        $('#datetimepicker8').datetimepicker('minDate', e.date);
+    });
+    $("#datetimepicker8").on("change.datetimepicker", function (e) {
+        $('#datetimepicker7').datetimepicker('maxDate', e.date);
+    });
+});
 })
+
+import 'tempusdominus-bootstrap-4'
+import 'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css'
+import 'font-awesome/css/font-awesome.css'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
