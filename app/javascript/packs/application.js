@@ -25,6 +25,28 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
+import 'sweetalert2'
+import Swal from 'sweetalert2'
+window.Swal = Swal
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.btn-submit').addEventListener('click', function() {
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: `Save`,
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('Changes are not saved', '', 'info')
+      }
+    })
+  })
+})
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
