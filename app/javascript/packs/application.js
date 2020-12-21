@@ -17,8 +17,12 @@ import 'select2'
 import 'select2/dist/css/select2.css'
 import $ from 'jquery' 
 window.$ = $
-$(document).ready(function() {
-  $('.js-example-basic-single').select2();
+// currency
+$(document).on('turbolinks:load', function() {
+  $('.js-example-basic-single').select2();  // currency
+  $(".js-example-tags").select2({           // tags (turbolinks)
+    tags: true
+  });
 });
 
 
