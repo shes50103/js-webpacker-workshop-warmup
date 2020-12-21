@@ -30,7 +30,8 @@ import Swal from 'sweetalert2'
 window.Swal = Swal
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('.btn-submit').addEventListener('click', function() {
+  document.querySelector('.btn-submit').addEventListener('click', function(e) {
+    e.preventDefault()
     Swal.fire({
       title: 'Do you want to save the changes?',
       showDenyButton: true,
@@ -38,11 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
       confirmButtonText: `Save`,
       denyButtonText: `Don't save`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        Swal.fire('Saved!', '', 'success')
-      } else if (result.isDenied) {
-        Swal.fire('Changes are not saved', '', 'info')
+        Swal.fire({
+          title: 'loading...',
+          showConfirmButton: false
+        })
+       document.querySelector('form').submit()
       }
     })
   })
@@ -50,20 +52,21 @@ document.addEventListener('DOMContentLoaded', function() {
   $(function () {
     $('#datetimepicker7').datetimepicker();
     $('#datetimepicker8').datetimepicker({
-        useCurrent: false
+      useCurrent: false
     });
     $("#datetimepicker7").on("change.datetimepicker", function (e) {
-        $('#datetimepicker8').datetimepicker('minDate', e.date);
+      $('#datetimepicker8').datetimepicker('minDate', e.date);
     });
     $("#datetimepicker8").on("change.datetimepicker", function (e) {
-        $('#datetimepicker7').datetimepicker('maxDate', e.date);
+      $('#datetimepicker7').datetimepicker('maxDate', e.date);
     });
-});
+  });
 })
 
 import 'tempusdominus-bootstrap-4'
 import 'tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css'
 import 'font-awesome/css/font-awesome.css'
+import { loaders } from '@rails/webpacker'
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

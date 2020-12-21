@@ -26,20 +26,20 @@
     <div class="input-group date" id="datetimepicker7" data-target-input="nearest">
       <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker7"/>
       <div class="input-group-append" data-target="#datetimepicker7" data-toggle="datetimepicker">
-          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
       </div>
-  </div>
+    </div>
   </div>
 
   <div class="field">
     <%= form.label :end_at %>
     <div class="form-group">
       <div class="input-group date" id="datetimepicker8" data-target-input="nearest">
-           <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker8"/>
-           <div class="input-group-append" data-target="#datetimepicker8" data-toggle="datetimepicker">
-               <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-           </div>
-       </div>
+        <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker8"/>
+        <div class="input-group-append" data-target="#datetimepicker8" data-toggle="datetimepicker">
+          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+        </div>
+      </div>
    </div>
   </div>
 
@@ -58,8 +58,8 @@
       <option value="tag1">tag1</option>
       <option value="tag2">tag2</option>
       <option value="tag3">tag3</option>
-      <%= options_for_select( form.object.tag_list, form.object.tag_list)
-       %>
+      <%= options_for_select( form.object.tag_list, form.object.tag_list ) %>  
+      <!--  第一個form.object.tag_list指的是所有類型的tag，第二個則是該product所選到的tag  -->
     </select>
   </div>
   <div class="actions btn-submit">
