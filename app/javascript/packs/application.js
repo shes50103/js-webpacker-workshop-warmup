@@ -7,10 +7,19 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-require('style')
-require('jquery')
-require('popper.js')
-require('bootstrap')
+
+import 'jquery'
+import 'popper.js'
+import 'bootstrap'
+import 'bootstrap/scss/bootstrap.scss'
+
+import 'select2'
+import 'select2/dist/css/select2.css'
+import $ from 'jquery' 
+window.$ = $
+$(document).ready(function() {
+  $('.js-example-basic-single').select2();
+});
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
